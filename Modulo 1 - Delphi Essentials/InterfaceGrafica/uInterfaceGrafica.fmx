@@ -1,0 +1,106 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object pnlTitulo: TPanel
+    Position.X = -8.000000000000000000
+    Size.Width = 648.000000000000000000
+    Size.Height = 73.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object lblTitulo: TLabel
+      StyledSettings = [Family, Style, FontColor]
+      Position.X = 232.000000000000000000
+      Position.Y = 24.000000000000000000
+      Size.Width = 217.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 22.000000000000000000
+      TextSettings.Trimming = None
+      Text = 'Conversor de Moedas'
+      TabOrder = 0
+    end
+  end
+  object Panel1: TPanel
+    Position.X = 72.000000000000000000
+    Position.Y = 88.000000000000000000
+    Size.Width = 505.000000000000000000
+    Size.Height = 113.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    object lblRealDolar: TLabel
+      Position.X = 8.000000000000000000
+      Position.Y = 48.000000000000000000
+      Size.Width = 185.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Trimming = None
+      Text = 'Converter Real para Dolar:'
+      TabOrder = 0
+    end
+    object edtInputReal: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 1
+      Position.X = 184.000000000000000000
+      Position.Y = 40.000000000000000000
+      Size.Width = 100.000000000000000000
+      Size.Height = 41.000000000000000000
+      Size.PlatformDefault = False
+      OnKeyUp = edtInputRealKeyUp
+    end
+    object edtResultadoDolar: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 2
+      Position.X = 368.000000000000000000
+      Position.Y = 40.000000000000000000
+      Enabled = False
+      Size.Width = 89.000000000000000000
+      Size.Height = 41.000000000000000000
+      Size.PlatformDefault = False
+    end
+  end
+  object Panel2: TPanel
+    Position.X = 72.000000000000000000
+    Position.Y = 248.000000000000000000
+    Size.Width = 505.000000000000000000
+    Size.Height = 113.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object lblDolarReal: TLabel
+      Position.X = 8.000000000000000000
+      Position.Y = 48.000000000000000000
+      Size.Width = 145.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Trimming = None
+      Text = 'Converter Dolar para Real: '
+      TabOrder = 0
+    end
+    object edtInputDolar: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 2
+      Position.X = 184.000000000000000000
+      Position.Y = 40.000000000000000000
+      Size.Width = 100.000000000000000000
+      Size.Height = 41.000000000000000000
+      Size.PlatformDefault = False
+      OnKeyUp = edtInputDolarKeyUp
+    end
+    object edtResultadoReal: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 1
+      Position.X = 368.000000000000000000
+      Position.Y = 40.000000000000000000
+      Enabled = False
+      Size.Width = 89.000000000000000000
+      Size.Height = 41.000000000000000000
+      Size.PlatformDefault = False
+    end
+  end
+end
