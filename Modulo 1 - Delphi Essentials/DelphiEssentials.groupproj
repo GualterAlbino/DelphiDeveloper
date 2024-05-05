@@ -15,6 +15,9 @@
         <Projects Include="ConversorClient.dproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="Pokedex.dproj">
+            <Dependencies/>
+        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -59,14 +62,23 @@
     <Target Name="ConversorClient:Make">
         <MSBuild Projects="ConversorClient.dproj" Targets="Make"/>
     </Target>
+    <Target Name="Pokedex">
+        <MSBuild Projects="Pokedex.dproj"/>
+    </Target>
+    <Target Name="Pokedex:Clean">
+        <MSBuild Projects="Pokedex.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Pokedex:Make">
+        <MSBuild Projects="Pokedex.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="AplicacaoDOS;InterfaceGrafica;DataSnapServer;ConversorClient"/>
+        <CallTarget Targets="AplicacaoDOS;InterfaceGrafica;DataSnapServer;ConversorClient;Pokedex"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="AplicacaoDOS:Clean;InterfaceGrafica:Clean;DataSnapServer:Clean;ConversorClient:Clean"/>
+        <CallTarget Targets="AplicacaoDOS:Clean;InterfaceGrafica:Clean;DataSnapServer:Clean;ConversorClient:Clean;Pokedex:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="AplicacaoDOS:Make;InterfaceGrafica:Make;DataSnapServer:Make;ConversorClient:Make"/>
+        <CallTarget Targets="AplicacaoDOS:Make;InterfaceGrafica:Make;DataSnapServer:Make;ConversorClient:Make;Pokedex:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>
